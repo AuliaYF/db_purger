@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="db_purger_demo_1" model="db.purger.demo">
+            <field name="name">Demo #1</field>
+        </record>
+
+        <record id="db_purger_demo_2" model="db.purger.demo">
+            <field name="name">Demo #2</field>
+        </record>
+
+        <record id="db_purger_demo_3" model="db.purger.demo">
+            <field name="name">Demo #3</field>
+        </record>
+
+        <record id="db_purger_demo_4" model="db.purger.demo">
+            <field name="name">Demo #4</field>
+        </record>
+
+        <record id="db_purger_demo_5" model="db.purger.demo">
+            <field name="name">Demo #5</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="action_db_purger" model="ir.actions.act_window">
+            <field name="name">Database Purger</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">db.purger</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create new record here
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+
+        <record id="view_db_purger_tree" model="ir.ui.view">
+            <field name="name">Database Purger</field>
+            <field name="model">db.purger</field>
+            <field name="arch" type="xml">
+                <tree string="Database Purger">
+                    <field name="name"/>
+                    <field name="line_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_db_purger_form" model="ir.ui.view">
+            <field name="name">Database Purger</field>
+            <field name="model">db.purger</field>
+            <field name="arch" type="xml">
+                <form string="Database Purger">
+                    <sheet>
+                        <header>
+                            <button name="action_purge" string="Purge" class="oe_highlight" type="object"
+                                    confirm="Do you really want to purge these models?"/>
+                        </header>
+                        <group>
+                            <field name="name"/>
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="model_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</odoo>
